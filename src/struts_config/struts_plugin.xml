@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.multipart.saveDir" value=""></constant>
+	<constant name="struts.multipart.maxSize" value="107010000000" />
+
+	<!-- Add packages here -->
+	<package name="actionsUpload" extends="struts-default"
+		namespace="/actionsUpload">
+		<action name="ckeditorUpload" class="com.zsglj.action.CkeditorUpload">
+		</action>
+		<action name="uploaFile" class="com.zsglj.action.UploadifyAction"
+			method="uploaFile">
+		</action>
+	</package>
+</struts>

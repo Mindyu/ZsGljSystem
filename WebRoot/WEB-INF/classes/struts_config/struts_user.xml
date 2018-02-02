@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+      <constant name="struts.devMode" value="true" />
+	<package name="actionsUser" extends="struts-default" namespace="/actionsUser">
+	
+		<action name = "userInfo" class="com.zsglj.admin.actions.user.UserPage" method="userInfo">
+			<result name="success">/pageAreas/Admin/UserManage/userInfo.jsp</result>
+		</action>
+		
+		<action name="userlistData" class="com.zsglj.admin.actions.user.UserPage" method="userlistData">
+		</action>
+		
+		<action name="showUser" class="com.zsglj.admin.actions.user.UserOperation" method="showUser">
+			<result name="SUCCESS">/pageAreas/Admin/UserManage/showUser.jsp</result>
+		</action>
+		
+		<action name="putupdateUser" class="com.zsglj.admin.actions.user.UserOperation" method="putupdateUser">
+			<result name="RESULT">/pageAreas/Admin/UserManage/updateUser.jsp</result>
+		</action>
+		
+		<action name = "addUser" class="com.zsglj.admin.actions.user.UserOperation" method="addUser">
+			<result name="RESULT">/pageAreas/Admin/UserManage/userInfo.jsp</result>
+		</action>
+		
+		<action name="updateUser" class="com.zsglj.admin.actions.user.UserOperation" method="updateUser">
+			<result name="RESULT">/pageAreas/Admin/UserManage/userInfo.jsp</result>
+		</action>
+		
+		<action name="deleteUser" class="com.zsglj.admin.actions.user.UserOperation" method="deleteUser">
+		</action>
+		
+		<action name="queryuserlist" class="com.zsglj.admin.actions.user.UserPage" method="queryuserlist">
+		</action>
+		
+	</package>
+	
+</struts>

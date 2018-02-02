@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+      <constant name="struts.devMode" value="true" />
+	<package name="actionsAdminCompany" extends="struts-default" namespace="/actionsAdminCompany">
+	
+		<action name = "companyInfo" class="com.zsglj.admin.actions.company.CompanyPage" method="companyInfo">
+			<result name="success">/pageAreas/Admin/CompanyManage/companyInfo.jsp</result>
+		</action>
+		
+		<action name="companylistData" class="com.zsglj.admin.actions.company.CompanyPage" method="companylistData">
+		</action>
+		
+		<action name="showCompany" class="com.zsglj.admin.actions.company.CompanyOperation" method="showCompany">
+			<result name="SUCCESS">/pageAreas/Admin/CompanyManage/showCompany.jsp</result>
+		</action>
+		
+		<action name = "addCompany" class="com.zsglj.admin.actions.company.CompanyOperation" method="addCompany">
+			<result name="RESULT">/pageAreas/Admin/CompanyManage/companyInfo.jsp</result>
+		</action>
+		
+		<action name="updateCom" class="com.zsglj.admin.actions.company.CompanyOperation" method="updateCom">
+			<result name="RESULT">/pageAreas/Admin/CompanyManage/companyInfo.jsp</result>
+		</action>
+		
+		<action name="putupdateCom" class="com.zsglj.admin.actions.company.CompanyOperation" method="putupdateCom">
+			<result name="RESULT">/pageAreas/Admin/CompanyManage/updateCompany.jsp</result>
+		</action>
+		
+		<action name="deleteCompany" class="com.zsglj.admin.actions.company.CompanyOperation" method="deleteCompany">
+		</action>
+		
+		<action name="querycompanylist" class="com.zsglj.admin.actions.company.CompanyPage" method="querycompanylist">
+		</action>
+		
+	</package>
+	
+</struts>

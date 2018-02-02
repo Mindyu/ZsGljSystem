@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<package name="actionEvent" namespace="/actionEvent" extends="json-default" >
+		<action name="showEvent" class="com.zsglj.company.action.EventManage" method="showEvent">
+			<result name="success">/pageAreas/EventManage/showEvent.jsp</result>
+		</action>
+		<action name="eventInfo" class="com.zsglj.company.action.EventPage" method="eventInfo">
+			<result name="success">/pageAreas/EventManage/eventInfo.jsp</result>
+		</action>
+		<action name="putupdateEvent" class="com.zsglj.company.action.EventManage" method="putupdateEvent">
+			<result name="RESULT">/pageAreas/EventManage/updateEvent.jsp</result>
+		</action>
+		<action name="addEvent" class="com.zsglj.company.action.EventManage" method="addEvent">
+			<result name="success">/pageAreas/EventManage/eventInfo.jsp</result>
+		</action>
+		<action name="updateEvent" class="com.zsglj.company.action.EventManage" method="updateEvent">
+			<result name="success">/pageAreas/EventManage/eventInfo.jsp</result>
+		</action>
+		
+		<action name="eventList" class="com.zsglj.company.action.EventPage" method="eventlistData">
+		</action>
+		<action name="queryeventlist" class="com.zsglj.company.action.EventPage" method="queryeventlist">
+		</action>
+		<action name="submitEvent" class="com.zsglj.company.action.EventManage" method="submitEvent">
+		</action>
+		<action name="deleteEvent" class="com.zsglj.company.action.EventManage" method="deleteEvent">
+		</action>
+		<action name="returnEvent" class="com.zsglj.company.action.EventManage" method="returnEvent">
+		</action>
+		<action name="agreeReturnEvent" class="com.zsglj.company.action.EventManage" method="agreeReturnEvent">
+		</action>
+		<action name="revokeEvent" class="com.zsglj.company.action.EventManage" method="revokeEvent">
+		</action>
+		<action name="viewRevokeReason" class="com.zsglj.company.action.EventManage" method="viewRevokeReason">
+			<result type="stream">
+                <param name="contentType">text/plain</param>
+                <param name="inputName">revokeReasonStream</param>
+            </result>
+		</action>
+	</package>
+
+</struts>
